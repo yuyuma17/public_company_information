@@ -47,6 +47,7 @@ dependencies:
   # Freezed
   freezed_annotation: ^2.1.0
   # Utils
+  cached_network_image: ^3.2.3
   dartz: ^0.10.1
 
 dev_dependencies:

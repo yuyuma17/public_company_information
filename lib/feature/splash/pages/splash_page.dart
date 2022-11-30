@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
     return BlocListener<GetAllInfoCubit, GetAllInfoState>(
       listener: (context, state) {
         state.whenOrNull(
-          success: () {
+          success: (_) {
             Navigator.of(context).pushReplacementNamed(MainPage.routeName);
           },
         );

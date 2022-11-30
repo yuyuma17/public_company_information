@@ -31,7 +31,7 @@ mixin _$Company {
   @JsonKey(name: '外國企業註冊地國')
   String get e => throw _privateConstructorUsedError;
   @JsonKey(name: '產業別')
-  String get f => throw _privateConstructorUsedError;
+  Industry get industry => throw _privateConstructorUsedError;
   @JsonKey(name: '住址')
   String get g => throw _privateConstructorUsedError;
   @JsonKey(name: '營利事業統一編號')
@@ -101,7 +101,7 @@ abstract class $CompanyCopyWith<$Res> {
       @JsonKey(name: '公司名稱') String c,
       @JsonKey(name: '公司簡稱') String d,
       @JsonKey(name: '外國企業註冊地國') String e,
-      @JsonKey(name: '產業別') String f,
+      @JsonKey(name: '產業別') Industry industry,
       @JsonKey(name: '住址') String g,
       @JsonKey(name: '營利事業統一編號') String h,
       @JsonKey(name: '董事長') String i,
@@ -148,7 +148,7 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
     Object? c = null,
     Object? d = null,
     Object? e = null,
-    Object? f = null,
+    Object? industry = null,
     Object? g = null,
     Object? h = null,
     Object? i = null,
@@ -197,10 +197,10 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as String,
-      f: null == f
-          ? _value.f
-          : f // ignore: cast_nullable_to_non_nullable
-              as String,
+      industry: null == industry
+          ? _value.industry
+          : industry // ignore: cast_nullable_to_non_nullable
+              as Industry,
       g: null == g
           ? _value.g
           : g // ignore: cast_nullable_to_non_nullable
@@ -322,7 +322,7 @@ abstract class _$$_CompanyCopyWith<$Res> implements $CompanyCopyWith<$Res> {
       @JsonKey(name: '公司名稱') String c,
       @JsonKey(name: '公司簡稱') String d,
       @JsonKey(name: '外國企業註冊地國') String e,
-      @JsonKey(name: '產業別') String f,
+      @JsonKey(name: '產業別') Industry industry,
       @JsonKey(name: '住址') String g,
       @JsonKey(name: '營利事業統一編號') String h,
       @JsonKey(name: '董事長') String i,
@@ -366,7 +366,7 @@ class __$$_CompanyCopyWithImpl<$Res>
     Object? c = null,
     Object? d = null,
     Object? e = null,
-    Object? f = null,
+    Object? industry = null,
     Object? g = null,
     Object? h = null,
     Object? i = null,
@@ -415,10 +415,10 @@ class __$$_CompanyCopyWithImpl<$Res>
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as String,
-      null == f
-          ? _value.f
-          : f // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == industry
+          ? _value.industry
+          : industry // ignore: cast_nullable_to_non_nullable
+              as Industry,
       null == g
           ? _value.g
           : g // ignore: cast_nullable_to_non_nullable
@@ -536,7 +536,7 @@ class _$_Company implements _Company {
       @JsonKey(name: '公司名稱') this.c,
       @JsonKey(name: '公司簡稱') this.d,
       @JsonKey(name: '外國企業註冊地國') this.e,
-      @JsonKey(name: '產業別') this.f,
+      @JsonKey(name: '產業別') this.industry,
       @JsonKey(name: '住址') this.g,
       @JsonKey(name: '營利事業統一編號') this.h,
       @JsonKey(name: '董事長') this.i,
@@ -584,7 +584,7 @@ class _$_Company implements _Company {
   final String e;
   @override
   @JsonKey(name: '產業別')
-  final String f;
+  final Industry industry;
   @override
   @JsonKey(name: '住址')
   final String g;
@@ -666,7 +666,7 @@ class _$_Company implements _Company {
 
   @override
   String toString() {
-    return 'Company(a: $a, b: $b, c: $c, d: $d, e: $e, f: $f, g: $g, h: $h, i: $i, j: $j, k: $k, l: $l, m: $m, n: $n, o: $o, p: $p, q: $q, r: $r, s: $s, t: $t, u: $u, v: $v, w: $w, x: $x, y: $y, z: $z, a1: $a1, a2: $a2, a3: $a3, a4: $a4, a5: $a5, a6: $a6)';
+    return 'Company(a: $a, b: $b, c: $c, d: $d, e: $e, industry: $industry, g: $g, h: $h, i: $i, j: $j, k: $k, l: $l, m: $m, n: $n, o: $o, p: $p, q: $q, r: $r, s: $s, t: $t, u: $u, v: $v, w: $w, x: $x, y: $y, z: $z, a1: $a1, a2: $a2, a3: $a3, a4: $a4, a5: $a5, a6: $a6)';
   }
 
   @override
@@ -679,7 +679,8 @@ class _$_Company implements _Company {
             (identical(other.c, c) || other.c == c) &&
             (identical(other.d, d) || other.d == d) &&
             (identical(other.e, e) || other.e == e) &&
-            (identical(other.f, f) || other.f == f) &&
+            (identical(other.industry, industry) ||
+                other.industry == industry) &&
             (identical(other.g, g) || other.g == g) &&
             (identical(other.h, h) || other.h == h) &&
             (identical(other.i, i) || other.i == i) &&
@@ -717,7 +718,7 @@ class _$_Company implements _Company {
         c,
         d,
         e,
-        f,
+        industry,
         g,
         h,
         i,
@@ -767,7 +768,7 @@ abstract class _Company implements Company {
       @JsonKey(name: '公司名稱') final String c,
       @JsonKey(name: '公司簡稱') final String d,
       @JsonKey(name: '外國企業註冊地國') final String e,
-      @JsonKey(name: '產業別') final String f,
+      @JsonKey(name: '產業別') final Industry industry,
       @JsonKey(name: '住址') final String g,
       @JsonKey(name: '營利事業統一編號') final String h,
       @JsonKey(name: '董事長') final String i,
@@ -814,7 +815,7 @@ abstract class _Company implements Company {
   String get e;
   @override
   @JsonKey(name: '產業別')
-  String get f;
+  Industry get industry;
   @override
   @JsonKey(name: '住址')
   String get g;

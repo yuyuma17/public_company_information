@@ -20,7 +20,8 @@ mixin _$GetAllInfoState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(Map<Industry, List<Company>> industryGroupMap)
+        success,
     required TResult Function(Failure failure) fail,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +29,7 @@ mixin _$GetAllInfoState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult? Function(Failure failure)? fail,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +37,7 @@ mixin _$GetAllInfoState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult Function(Failure failure)? fail,
     required TResult orElse(),
   }) =>
@@ -125,7 +126,8 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(Map<Industry, List<Company>> industryGroupMap)
+        success,
     required TResult Function(Failure failure) fail,
   }) {
     return initial();
@@ -136,7 +138,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult? Function(Failure failure)? fail,
   }) {
     return initial?.call();
@@ -147,7 +149,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult Function(Failure failure)? fail,
     required TResult orElse(),
   }) {
@@ -238,7 +240,8 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(Map<Industry, List<Company>> industryGroupMap)
+        success,
     required TResult Function(Failure failure) fail,
   }) {
     return loading();
@@ -249,7 +252,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult? Function(Failure failure)? fail,
   }) {
     return loading?.call();
@@ -260,7 +263,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult Function(Failure failure)? fail,
     required TResult orElse(),
   }) {
@@ -317,6 +320,8 @@ abstract class _$$_SuccessCopyWith<$Res> {
   factory _$$_SuccessCopyWith(
           _$_Success value, $Res Function(_$_Success) then) =
       __$$_SuccessCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Map<Industry, List<Company>> industryGroupMap});
 }
 
 /// @nodoc
@@ -325,36 +330,68 @@ class __$$_SuccessCopyWithImpl<$Res>
     implements _$$_SuccessCopyWith<$Res> {
   __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? industryGroupMap = null,
+  }) {
+    return _then(_$_Success(
+      null == industryGroupMap
+          ? _value._industryGroupMap
+          : industryGroupMap // ignore: cast_nullable_to_non_nullable
+              as Map<Industry, List<Company>>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Success implements _Success {
-  const _$_Success();
+  const _$_Success(final Map<Industry, List<Company>> industryGroupMap)
+      : _industryGroupMap = industryGroupMap;
+
+  final Map<Industry, List<Company>> _industryGroupMap;
+  @override
+  Map<Industry, List<Company>> get industryGroupMap {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_industryGroupMap);
+  }
 
   @override
   String toString() {
-    return 'GetAllInfoState.success()';
+    return 'GetAllInfoState.success(industryGroupMap: $industryGroupMap)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Success);
+        (other.runtimeType == runtimeType &&
+            other is _$_Success &&
+            const DeepCollectionEquality()
+                .equals(other._industryGroupMap, _industryGroupMap));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_industryGroupMap));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      __$$_SuccessCopyWithImpl<_$_Success>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(Map<Industry, List<Company>> industryGroupMap)
+        success,
     required TResult Function(Failure failure) fail,
   }) {
-    return success();
+    return success(industryGroupMap);
   }
 
   @override
@@ -362,10 +399,10 @@ class _$_Success implements _Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult? Function(Failure failure)? fail,
   }) {
-    return success?.call();
+    return success?.call(industryGroupMap);
   }
 
   @override
@@ -373,12 +410,12 @@ class _$_Success implements _Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult Function(Failure failure)? fail,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success();
+      return success(industryGroupMap);
     }
     return orElse();
   }
@@ -422,7 +459,13 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements GetAllInfoState {
-  const factory _Success() = _$_Success;
+  const factory _Success(final Map<Industry, List<Company>> industryGroupMap) =
+      _$_Success;
+
+  Map<Industry, List<Company>> get industryGroupMap;
+  @JsonKey(ignore: true)
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -499,7 +542,8 @@ class _$_Fail implements _Fail {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(Map<Industry, List<Company>> industryGroupMap)
+        success,
     required TResult Function(Failure failure) fail,
   }) {
     return fail(failure);
@@ -510,7 +554,7 @@ class _$_Fail implements _Fail {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult? Function(Failure failure)? fail,
   }) {
     return fail?.call(failure);
@@ -521,7 +565,7 @@ class _$_Fail implements _Fail {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(Map<Industry, List<Company>> industryGroupMap)? success,
     TResult Function(Failure failure)? fail,
     required TResult orElse(),
   }) {

@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'enum/Industry.dart';
+
 part 'company.freezed.dart';
 part 'company.g.dart';
 
@@ -11,7 +13,7 @@ class Company with _$Company {
     @JsonKey(name: '公司名稱') String c,
     @JsonKey(name: '公司簡稱') String d,
     @JsonKey(name: '外國企業註冊地國') String e,
-    @JsonKey(name: '產業別') String f,
+    @JsonKey(name: '產業別') Industry industry,
     @JsonKey(name: '住址') String g,
     @JsonKey(name: '營利事業統一編號') String h,
     @JsonKey(name: '董事長') String i,

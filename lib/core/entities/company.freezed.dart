@@ -23,9 +23,9 @@ mixin _$Company {
   @JsonKey(name: '出表日期')
   String get a => throw _privateConstructorUsedError;
   @JsonKey(name: '公司代號')
-  String get b => throw _privateConstructorUsedError;
+  String get code => throw _privateConstructorUsedError;
   @JsonKey(name: '公司名稱')
-  String get c => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: '公司簡稱')
   String get d => throw _privateConstructorUsedError;
   @JsonKey(name: '外國企業註冊地國')
@@ -97,8 +97,8 @@ abstract class $CompanyCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: '出表日期') String a,
-      @JsonKey(name: '公司代號') String b,
-      @JsonKey(name: '公司名稱') String c,
+      @JsonKey(name: '公司代號') String code,
+      @JsonKey(name: '公司名稱') String name,
       @JsonKey(name: '公司簡稱') String d,
       @JsonKey(name: '外國企業註冊地國') String e,
       @JsonKey(name: '產業別') Industry industry,
@@ -144,8 +144,8 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
   @override
   $Res call({
     Object? a = null,
-    Object? b = null,
-    Object? c = null,
+    Object? code = null,
+    Object? name = null,
     Object? d = null,
     Object? e = null,
     Object? industry = null,
@@ -181,13 +181,13 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
           ? _value.a
           : a // ignore: cast_nullable_to_non_nullable
               as String,
-      b: null == b
-          ? _value.b
-          : b // ignore: cast_nullable_to_non_nullable
+      code: null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
               as String,
-      c: null == c
-          ? _value.c
-          : c // ignore: cast_nullable_to_non_nullable
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
       d: null == d
           ? _value.d
@@ -318,8 +318,8 @@ abstract class _$$_CompanyCopyWith<$Res> implements $CompanyCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: '出表日期') String a,
-      @JsonKey(name: '公司代號') String b,
-      @JsonKey(name: '公司名稱') String c,
+      @JsonKey(name: '公司代號') String code,
+      @JsonKey(name: '公司名稱') String name,
       @JsonKey(name: '公司簡稱') String d,
       @JsonKey(name: '外國企業註冊地國') String e,
       @JsonKey(name: '產業別') Industry industry,
@@ -362,8 +362,8 @@ class __$$_CompanyCopyWithImpl<$Res>
   @override
   $Res call({
     Object? a = null,
-    Object? b = null,
-    Object? c = null,
+    Object? code = null,
+    Object? name = null,
     Object? d = null,
     Object? e = null,
     Object? industry = null,
@@ -399,13 +399,13 @@ class __$$_CompanyCopyWithImpl<$Res>
           ? _value.a
           : a // ignore: cast_nullable_to_non_nullable
               as String,
-      null == b
-          ? _value.b
-          : b // ignore: cast_nullable_to_non_nullable
+      null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
               as String,
-      null == c
-          ? _value.c
-          : c // ignore: cast_nullable_to_non_nullable
+      null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
       null == d
           ? _value.d
@@ -532,8 +532,8 @@ class __$$_CompanyCopyWithImpl<$Res>
 class _$_Company implements _Company {
   const _$_Company(
       @JsonKey(name: '出表日期') this.a,
-      @JsonKey(name: '公司代號') this.b,
-      @JsonKey(name: '公司名稱') this.c,
+      @JsonKey(name: '公司代號') this.code,
+      @JsonKey(name: '公司名稱') this.name,
       @JsonKey(name: '公司簡稱') this.d,
       @JsonKey(name: '外國企業註冊地國') this.e,
       @JsonKey(name: '產業別') this.industry,
@@ -572,10 +572,10 @@ class _$_Company implements _Company {
   final String a;
   @override
   @JsonKey(name: '公司代號')
-  final String b;
+  final String code;
   @override
   @JsonKey(name: '公司名稱')
-  final String c;
+  final String name;
   @override
   @JsonKey(name: '公司簡稱')
   final String d;
@@ -666,7 +666,7 @@ class _$_Company implements _Company {
 
   @override
   String toString() {
-    return 'Company(a: $a, b: $b, c: $c, d: $d, e: $e, industry: $industry, g: $g, h: $h, i: $i, j: $j, k: $k, l: $l, m: $m, n: $n, o: $o, p: $p, q: $q, r: $r, s: $s, t: $t, u: $u, v: $v, w: $w, x: $x, y: $y, z: $z, a1: $a1, a2: $a2, a3: $a3, a4: $a4, a5: $a5, a6: $a6)';
+    return 'Company(a: $a, code: $code, name: $name, d: $d, e: $e, industry: $industry, g: $g, h: $h, i: $i, j: $j, k: $k, l: $l, m: $m, n: $n, o: $o, p: $p, q: $q, r: $r, s: $s, t: $t, u: $u, v: $v, w: $w, x: $x, y: $y, z: $z, a1: $a1, a2: $a2, a3: $a3, a4: $a4, a5: $a5, a6: $a6)';
   }
 
   @override
@@ -675,8 +675,8 @@ class _$_Company implements _Company {
         (other.runtimeType == runtimeType &&
             other is _$_Company &&
             (identical(other.a, a) || other.a == a) &&
-            (identical(other.b, b) || other.b == b) &&
-            (identical(other.c, c) || other.c == c) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.d, d) || other.d == d) &&
             (identical(other.e, e) || other.e == e) &&
             (identical(other.industry, industry) ||
@@ -714,8 +714,8 @@ class _$_Company implements _Company {
   int get hashCode => Object.hashAll([
         runtimeType,
         a,
-        b,
-        c,
+        code,
+        name,
         d,
         e,
         industry,
@@ -764,8 +764,8 @@ class _$_Company implements _Company {
 abstract class _Company implements Company {
   const factory _Company(
       @JsonKey(name: '出表日期') final String a,
-      @JsonKey(name: '公司代號') final String b,
-      @JsonKey(name: '公司名稱') final String c,
+      @JsonKey(name: '公司代號') final String code,
+      @JsonKey(name: '公司名稱') final String name,
       @JsonKey(name: '公司簡稱') final String d,
       @JsonKey(name: '外國企業註冊地國') final String e,
       @JsonKey(name: '產業別') final Industry industry,
@@ -803,10 +803,10 @@ abstract class _Company implements Company {
   String get a;
   @override
   @JsonKey(name: '公司代號')
-  String get b;
+  String get code;
   @override
   @JsonKey(name: '公司名稱')
-  String get c;
+  String get name;
   @override
   @JsonKey(name: '公司簡稱')
   String get d;

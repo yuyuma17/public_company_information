@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'specific_industry_page.dart';
 import '../cubit/get_all_info_cubit.dart';
 import '../../../core/entities/enum/Industry.dart';
 
@@ -37,7 +38,16 @@ class _IndustryList extends StatelessWidget {
                 final name = entry.key.chineseName;
                 final count = entry.value.length;
                 return GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    final args = {
+                      'industryChineseName': name,
+                      'companies': entry.value,
+                    };
+                    Navigator.of(context).pushNamed(
+                      SpecificIndustryPage.routeName,
+                      arguments: args,
+                    );
+                  },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 8.0,

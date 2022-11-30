@@ -9,8 +9,8 @@ part 'company.g.dart';
 class Company with _$Company {
   const factory Company(
     @JsonKey(name: '出表日期') String a,
-    @JsonKey(name: '公司代號') String b,
-    @JsonKey(name: '公司名稱') String c,
+    @JsonKey(name: '公司代號') String code,
+    @JsonKey(name: '公司名稱') String name,
     @JsonKey(name: '公司簡稱') String d,
     @JsonKey(name: '外國企業註冊地國') String e,
     @JsonKey(name: '產業別') Industry industry,

@@ -44,8 +44,8 @@ _$_Company _$$_CompanyFromJson(Map<String, dynamic> json) => _$_Company(
 Map<String, dynamic> _$$_CompanyToJson(_$_Company instance) =>
     <String, dynamic>{
       '出表日期': instance.a,
-      '公司代號': instance.b,
-      '公司名稱': instance.c,
+      '公司代號': instance.code,
+      '公司名稱': instance.name,
       '公司簡稱': instance.d,
       '外國企業註冊地國': instance.e,
       '產業別': _$IndustryEnumMap[instance.industry]!,

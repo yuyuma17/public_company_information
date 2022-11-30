@@ -16,6 +16,22 @@ class GetAllInfoCubit extends Cubit<GetAllInfoState> {
     _basicInfoRepository =
         basicInfoRepository ?? GetIt.instance.get<BasicInfoRepository>();
   }
+
+  void getAllPublicCompanyInformation() async {
+    emit(const _Loading());
+    final response =
+        await _basicInfoRepository.getAllPublicCompanyInformation();
+    response.fold(
+      (failure) => emit(_Fail(failure)),
+      (companies) {
+        if (companies != null) {
+          emit(const _Success());
+        } else {
+          emit(const _Fail(UnknownError()));
+        }
+      },
+    );
+  }
 }
 
 @freezed

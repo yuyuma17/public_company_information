@@ -1,24 +1,49 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class SplashPage extends StatelessWidget {
+import '../../info/cubit/get_all_info_cubit.dart';
+import '../../main/pages/main_page.dart';
+
+class SplashPage extends StatefulWidget {
   static const routeName = '/splash';
+
   const SplashPage({Key? key}) : super(key: key);
 
   @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<GetAllInfoCubit>().getAllPublicCompanyInformation();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              _SplashImage(),
-              Text('臺灣證券交易所'),
-              _UpdateIndicator(),
-            ],
+    return BlocListener<GetAllInfoCubit, GetAllInfoState>(
+      listener: (context, state) {
+        state.whenOrNull(
+          success: () {
+            Navigator.of(context).pushReplacementNamed(MainPage.routeName);
+          },
+        );
+      },
+      child: Scaffold(
+        body: SafeArea(
+          child: Container(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                _SplashImage(),
+                Text('臺灣證券交易所'),
+                _UpdateIndicator(),
+              ],
+            ),
           ),
         ),
       ),
@@ -44,9 +69,20 @@ class _UpdateIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 100.0),
-      child: CupertinoActivityIndicator(),
+    return Padding(
+      padding: const EdgeInsets.only(top: 100.0),
+      child: BlocBuilder<GetAllInfoCubit, GetAllInfoState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            fail: (failure) {
+              return const Text('發生錯誤');
+            },
+            orElse: () {
+              return const CupertinoActivityIndicator();
+            },
+          );
+        },
+      ),
     );
   }
 }

@@ -76,7 +76,7 @@ class _UpdateIndicator extends StatelessWidget {
       child: BlocBuilder<GetAllInfoCubit, GetAllInfoState>(
         builder: (context, state) {
           return state.maybeWhen(
-            fail: (failure) {
+            failed: (failure) {
               return const Text('發生錯誤');
             },
             orElse: () {

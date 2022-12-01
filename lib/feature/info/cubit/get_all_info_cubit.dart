@@ -18,7 +18,7 @@ class GetAllInfoCubit extends Cubit<GetAllInfoState> {
 
   GetAllInfoCubit({
     BasicInfoRepository? basicInfoRepository,
-  }) : super(const _Initial()) {
+  }) : super(const Initial()) {
     _basicInfoRepository =
         basicInfoRepository ?? GetIt.instance.get<BasicInfoRepository>();
   }
@@ -28,17 +28,17 @@ class GetAllInfoCubit extends Cubit<GetAllInfoState> {
   }
 
   void getAllPublicCompanyInformation() async {
-    emit(const _Loading());
+    emit(const Loading());
     final response =
         await _basicInfoRepository.getAllPublicCompanyInformation();
     response.fold(
-      (failure) => emit(_Fail(failure)),
+      (failure) => emit(Failed(failure)),
       (companies) {
         if (companies != null) {
           final industryGroupMap = _groupByIndustry(companies);
-          emit(_Success(industryGroupMap));
+          emit(Success(industryGroupMap));
         } else {
-          emit(const _Fail(UnknownError()));
+          emit(const Failed(UnknownError()));
         }
       },
     );
@@ -47,10 +47,10 @@ class GetAllInfoCubit extends Cubit<GetAllInfoState> {
 
 @freezed
 class GetAllInfoState with _$GetAllInfoState {
-  const factory GetAllInfoState.initial() = _Initial;
-  const factory GetAllInfoState.loading() = _Loading;
+  const factory GetAllInfoState.initial() = Initial;
+  const factory GetAllInfoState.loading() = Loading;
   const factory GetAllInfoState.success(
     Map<Industry, List<Company>> industryGroupMap,
-  ) = _Success;
-  const factory GetAllInfoState.fail(Failure failure) = _Fail;
+  ) = Success;
+  const factory GetAllInfoState.failed(Failure failure) = Failed;
 }

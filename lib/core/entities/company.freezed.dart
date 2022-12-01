@@ -21,69 +21,69 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Company {
   @JsonKey(name: '出表日期')
-  String get a => throw _privateConstructorUsedError;
+  String get publicationDate => throw _privateConstructorUsedError;
   @JsonKey(name: '公司代號')
   String get code => throw _privateConstructorUsedError;
   @JsonKey(name: '公司名稱')
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: '公司簡稱')
-  String get d => throw _privateConstructorUsedError;
+  String get abbreviationName => throw _privateConstructorUsedError;
   @JsonKey(name: '外國企業註冊地國')
-  String get e => throw _privateConstructorUsedError;
+  String get registrationCountry => throw _privateConstructorUsedError;
   @JsonKey(name: '產業別')
   Industry get industry => throw _privateConstructorUsedError;
   @JsonKey(name: '住址')
-  String get g => throw _privateConstructorUsedError;
+  String get address => throw _privateConstructorUsedError;
   @JsonKey(name: '營利事業統一編號')
-  String get h => throw _privateConstructorUsedError;
+  String get taxId => throw _privateConstructorUsedError;
   @JsonKey(name: '董事長')
-  String get i => throw _privateConstructorUsedError;
+  String get chairman => throw _privateConstructorUsedError;
   @JsonKey(name: '總經理')
-  String get j => throw _privateConstructorUsedError;
+  String get generalManager => throw _privateConstructorUsedError;
   @JsonKey(name: '發言人')
-  String get k => throw _privateConstructorUsedError;
+  String get spokesman => throw _privateConstructorUsedError;
   @JsonKey(name: '發言人職稱')
-  String get l => throw _privateConstructorUsedError;
+  String get spokesmanTitle => throw _privateConstructorUsedError;
   @JsonKey(name: '代理發言人')
-  String get m => throw _privateConstructorUsedError;
+  String get proxySpokesman => throw _privateConstructorUsedError;
   @JsonKey(name: '總機電話')
-  String get n => throw _privateConstructorUsedError;
+  String get centralPhoneNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '成立日期')
-  String get o => throw _privateConstructorUsedError;
+  String get establishmentDate => throw _privateConstructorUsedError;
   @JsonKey(name: '上市日期')
-  String get p => throw _privateConstructorUsedError;
+  String get listingDate => throw _privateConstructorUsedError;
   @JsonKey(name: '普通股每股面額')
-  String get q => throw _privateConstructorUsedError;
+  String get perValuePerShare => throw _privateConstructorUsedError;
   @JsonKey(name: '實收資本額')
-  String get r => throw _privateConstructorUsedError;
+  String get contributedCapital => throw _privateConstructorUsedError;
   @JsonKey(name: '私募股數')
-  String get s => throw _privateConstructorUsedError;
+  String get privateShare => throw _privateConstructorUsedError;
   @JsonKey(name: '特別股')
-  String get t => throw _privateConstructorUsedError;
+  String get preferredStock => throw _privateConstructorUsedError;
   @JsonKey(name: '編制財務報表類型')
-  String get u => throw _privateConstructorUsedError;
+  String get financialStatementType => throw _privateConstructorUsedError;
   @JsonKey(name: '股票過戶機構')
-  String get v => throw _privateConstructorUsedError;
+  String get stockTransferAgency => throw _privateConstructorUsedError;
   @JsonKey(name: '過戶電話')
-  String get w => throw _privateConstructorUsedError;
+  String get transferPhoneNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '過戶地址')
-  String get x => throw _privateConstructorUsedError;
+  String get transferAddress => throw _privateConstructorUsedError;
   @JsonKey(name: '簽證會計師事務所')
-  String get y => throw _privateConstructorUsedError;
+  String get accountingFirm => throw _privateConstructorUsedError;
   @JsonKey(name: '簽證會計師1')
-  String get z => throw _privateConstructorUsedError;
+  String get accountantOne => throw _privateConstructorUsedError;
   @JsonKey(name: '簽證會計師2')
-  String get a1 => throw _privateConstructorUsedError;
+  String get accountTwo => throw _privateConstructorUsedError;
   @JsonKey(name: '英文簡稱')
-  String get a2 => throw _privateConstructorUsedError;
+  String get englishAbbreviation => throw _privateConstructorUsedError;
   @JsonKey(name: '英文通訊地址')
-  String get a3 => throw _privateConstructorUsedError;
+  String get englishAddress => throw _privateConstructorUsedError;
   @JsonKey(name: '傳真機號碼')
-  String get a4 => throw _privateConstructorUsedError;
+  String get faxNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '電子郵件信箱')
-  String get a5 => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
   @JsonKey(name: '網址')
-  String get a6 => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -96,38 +96,38 @@ abstract class $CompanyCopyWith<$Res> {
       _$CompanyCopyWithImpl<$Res, Company>;
   @useResult
   $Res call(
-      {@JsonKey(name: '出表日期') String a,
+      {@JsonKey(name: '出表日期') String publicationDate,
       @JsonKey(name: '公司代號') String code,
       @JsonKey(name: '公司名稱') String name,
-      @JsonKey(name: '公司簡稱') String d,
-      @JsonKey(name: '外國企業註冊地國') String e,
+      @JsonKey(name: '公司簡稱') String abbreviationName,
+      @JsonKey(name: '外國企業註冊地國') String registrationCountry,
       @JsonKey(name: '產業別') Industry industry,
-      @JsonKey(name: '住址') String g,
-      @JsonKey(name: '營利事業統一編號') String h,
-      @JsonKey(name: '董事長') String i,
-      @JsonKey(name: '總經理') String j,
-      @JsonKey(name: '發言人') String k,
-      @JsonKey(name: '發言人職稱') String l,
-      @JsonKey(name: '代理發言人') String m,
-      @JsonKey(name: '總機電話') String n,
-      @JsonKey(name: '成立日期') String o,
-      @JsonKey(name: '上市日期') String p,
-      @JsonKey(name: '普通股每股面額') String q,
-      @JsonKey(name: '實收資本額') String r,
-      @JsonKey(name: '私募股數') String s,
-      @JsonKey(name: '特別股') String t,
-      @JsonKey(name: '編制財務報表類型') String u,
-      @JsonKey(name: '股票過戶機構') String v,
-      @JsonKey(name: '過戶電話') String w,
-      @JsonKey(name: '過戶地址') String x,
-      @JsonKey(name: '簽證會計師事務所') String y,
-      @JsonKey(name: '簽證會計師1') String z,
-      @JsonKey(name: '簽證會計師2') String a1,
-      @JsonKey(name: '英文簡稱') String a2,
-      @JsonKey(name: '英文通訊地址') String a3,
-      @JsonKey(name: '傳真機號碼') String a4,
-      @JsonKey(name: '電子郵件信箱') String a5,
-      @JsonKey(name: '網址') String a6});
+      @JsonKey(name: '住址') String address,
+      @JsonKey(name: '營利事業統一編號') String taxId,
+      @JsonKey(name: '董事長') String chairman,
+      @JsonKey(name: '總經理') String generalManager,
+      @JsonKey(name: '發言人') String spokesman,
+      @JsonKey(name: '發言人職稱') String spokesmanTitle,
+      @JsonKey(name: '代理發言人') String proxySpokesman,
+      @JsonKey(name: '總機電話') String centralPhoneNumber,
+      @JsonKey(name: '成立日期') String establishmentDate,
+      @JsonKey(name: '上市日期') String listingDate,
+      @JsonKey(name: '普通股每股面額') String perValuePerShare,
+      @JsonKey(name: '實收資本額') String contributedCapital,
+      @JsonKey(name: '私募股數') String privateShare,
+      @JsonKey(name: '特別股') String preferredStock,
+      @JsonKey(name: '編制財務報表類型') String financialStatementType,
+      @JsonKey(name: '股票過戶機構') String stockTransferAgency,
+      @JsonKey(name: '過戶電話') String transferPhoneNumber,
+      @JsonKey(name: '過戶地址') String transferAddress,
+      @JsonKey(name: '簽證會計師事務所') String accountingFirm,
+      @JsonKey(name: '簽證會計師1') String accountantOne,
+      @JsonKey(name: '簽證會計師2') String accountTwo,
+      @JsonKey(name: '英文簡稱') String englishAbbreviation,
+      @JsonKey(name: '英文通訊地址') String englishAddress,
+      @JsonKey(name: '傳真機號碼') String faxNumber,
+      @JsonKey(name: '電子郵件信箱') String email,
+      @JsonKey(name: '網址') String url});
 }
 
 /// @nodoc
@@ -143,43 +143,43 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? a = null,
+    Object? publicationDate = null,
     Object? code = null,
     Object? name = null,
-    Object? d = null,
-    Object? e = null,
+    Object? abbreviationName = null,
+    Object? registrationCountry = null,
     Object? industry = null,
-    Object? g = null,
-    Object? h = null,
-    Object? i = null,
-    Object? j = null,
-    Object? k = null,
-    Object? l = null,
-    Object? m = null,
-    Object? n = null,
-    Object? o = null,
-    Object? p = null,
-    Object? q = null,
-    Object? r = null,
-    Object? s = null,
-    Object? t = null,
-    Object? u = null,
-    Object? v = null,
-    Object? w = null,
-    Object? x = null,
-    Object? y = null,
-    Object? z = null,
-    Object? a1 = null,
-    Object? a2 = null,
-    Object? a3 = null,
-    Object? a4 = null,
-    Object? a5 = null,
-    Object? a6 = null,
+    Object? address = null,
+    Object? taxId = null,
+    Object? chairman = null,
+    Object? generalManager = null,
+    Object? spokesman = null,
+    Object? spokesmanTitle = null,
+    Object? proxySpokesman = null,
+    Object? centralPhoneNumber = null,
+    Object? establishmentDate = null,
+    Object? listingDate = null,
+    Object? perValuePerShare = null,
+    Object? contributedCapital = null,
+    Object? privateShare = null,
+    Object? preferredStock = null,
+    Object? financialStatementType = null,
+    Object? stockTransferAgency = null,
+    Object? transferPhoneNumber = null,
+    Object? transferAddress = null,
+    Object? accountingFirm = null,
+    Object? accountantOne = null,
+    Object? accountTwo = null,
+    Object? englishAbbreviation = null,
+    Object? englishAddress = null,
+    Object? faxNumber = null,
+    Object? email = null,
+    Object? url = null,
   }) {
     return _then(_value.copyWith(
-      a: null == a
-          ? _value.a
-          : a // ignore: cast_nullable_to_non_nullable
+      publicationDate: null == publicationDate
+          ? _value.publicationDate
+          : publicationDate // ignore: cast_nullable_to_non_nullable
               as String,
       code: null == code
           ? _value.code
@@ -189,121 +189,121 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      d: null == d
-          ? _value.d
-          : d // ignore: cast_nullable_to_non_nullable
+      abbreviationName: null == abbreviationName
+          ? _value.abbreviationName
+          : abbreviationName // ignore: cast_nullable_to_non_nullable
               as String,
-      e: null == e
-          ? _value.e
-          : e // ignore: cast_nullable_to_non_nullable
+      registrationCountry: null == registrationCountry
+          ? _value.registrationCountry
+          : registrationCountry // ignore: cast_nullable_to_non_nullable
               as String,
       industry: null == industry
           ? _value.industry
           : industry // ignore: cast_nullable_to_non_nullable
               as Industry,
-      g: null == g
-          ? _value.g
-          : g // ignore: cast_nullable_to_non_nullable
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
               as String,
-      h: null == h
-          ? _value.h
-          : h // ignore: cast_nullable_to_non_nullable
+      taxId: null == taxId
+          ? _value.taxId
+          : taxId // ignore: cast_nullable_to_non_nullable
               as String,
-      i: null == i
-          ? _value.i
-          : i // ignore: cast_nullable_to_non_nullable
+      chairman: null == chairman
+          ? _value.chairman
+          : chairman // ignore: cast_nullable_to_non_nullable
               as String,
-      j: null == j
-          ? _value.j
-          : j // ignore: cast_nullable_to_non_nullable
+      generalManager: null == generalManager
+          ? _value.generalManager
+          : generalManager // ignore: cast_nullable_to_non_nullable
               as String,
-      k: null == k
-          ? _value.k
-          : k // ignore: cast_nullable_to_non_nullable
+      spokesman: null == spokesman
+          ? _value.spokesman
+          : spokesman // ignore: cast_nullable_to_non_nullable
               as String,
-      l: null == l
-          ? _value.l
-          : l // ignore: cast_nullable_to_non_nullable
+      spokesmanTitle: null == spokesmanTitle
+          ? _value.spokesmanTitle
+          : spokesmanTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      m: null == m
-          ? _value.m
-          : m // ignore: cast_nullable_to_non_nullable
+      proxySpokesman: null == proxySpokesman
+          ? _value.proxySpokesman
+          : proxySpokesman // ignore: cast_nullable_to_non_nullable
               as String,
-      n: null == n
-          ? _value.n
-          : n // ignore: cast_nullable_to_non_nullable
+      centralPhoneNumber: null == centralPhoneNumber
+          ? _value.centralPhoneNumber
+          : centralPhoneNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      o: null == o
-          ? _value.o
-          : o // ignore: cast_nullable_to_non_nullable
+      establishmentDate: null == establishmentDate
+          ? _value.establishmentDate
+          : establishmentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      p: null == p
-          ? _value.p
-          : p // ignore: cast_nullable_to_non_nullable
+      listingDate: null == listingDate
+          ? _value.listingDate
+          : listingDate // ignore: cast_nullable_to_non_nullable
               as String,
-      q: null == q
-          ? _value.q
-          : q // ignore: cast_nullable_to_non_nullable
+      perValuePerShare: null == perValuePerShare
+          ? _value.perValuePerShare
+          : perValuePerShare // ignore: cast_nullable_to_non_nullable
               as String,
-      r: null == r
-          ? _value.r
-          : r // ignore: cast_nullable_to_non_nullable
+      contributedCapital: null == contributedCapital
+          ? _value.contributedCapital
+          : contributedCapital // ignore: cast_nullable_to_non_nullable
               as String,
-      s: null == s
-          ? _value.s
-          : s // ignore: cast_nullable_to_non_nullable
+      privateShare: null == privateShare
+          ? _value.privateShare
+          : privateShare // ignore: cast_nullable_to_non_nullable
               as String,
-      t: null == t
-          ? _value.t
-          : t // ignore: cast_nullable_to_non_nullable
+      preferredStock: null == preferredStock
+          ? _value.preferredStock
+          : preferredStock // ignore: cast_nullable_to_non_nullable
               as String,
-      u: null == u
-          ? _value.u
-          : u // ignore: cast_nullable_to_non_nullable
+      financialStatementType: null == financialStatementType
+          ? _value.financialStatementType
+          : financialStatementType // ignore: cast_nullable_to_non_nullable
               as String,
-      v: null == v
-          ? _value.v
-          : v // ignore: cast_nullable_to_non_nullable
+      stockTransferAgency: null == stockTransferAgency
+          ? _value.stockTransferAgency
+          : stockTransferAgency // ignore: cast_nullable_to_non_nullable
               as String,
-      w: null == w
-          ? _value.w
-          : w // ignore: cast_nullable_to_non_nullable
+      transferPhoneNumber: null == transferPhoneNumber
+          ? _value.transferPhoneNumber
+          : transferPhoneNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      x: null == x
-          ? _value.x
-          : x // ignore: cast_nullable_to_non_nullable
+      transferAddress: null == transferAddress
+          ? _value.transferAddress
+          : transferAddress // ignore: cast_nullable_to_non_nullable
               as String,
-      y: null == y
-          ? _value.y
-          : y // ignore: cast_nullable_to_non_nullable
+      accountingFirm: null == accountingFirm
+          ? _value.accountingFirm
+          : accountingFirm // ignore: cast_nullable_to_non_nullable
               as String,
-      z: null == z
-          ? _value.z
-          : z // ignore: cast_nullable_to_non_nullable
+      accountantOne: null == accountantOne
+          ? _value.accountantOne
+          : accountantOne // ignore: cast_nullable_to_non_nullable
               as String,
-      a1: null == a1
-          ? _value.a1
-          : a1 // ignore: cast_nullable_to_non_nullable
+      accountTwo: null == accountTwo
+          ? _value.accountTwo
+          : accountTwo // ignore: cast_nullable_to_non_nullable
               as String,
-      a2: null == a2
-          ? _value.a2
-          : a2 // ignore: cast_nullable_to_non_nullable
+      englishAbbreviation: null == englishAbbreviation
+          ? _value.englishAbbreviation
+          : englishAbbreviation // ignore: cast_nullable_to_non_nullable
               as String,
-      a3: null == a3
-          ? _value.a3
-          : a3 // ignore: cast_nullable_to_non_nullable
+      englishAddress: null == englishAddress
+          ? _value.englishAddress
+          : englishAddress // ignore: cast_nullable_to_non_nullable
               as String,
-      a4: null == a4
-          ? _value.a4
-          : a4 // ignore: cast_nullable_to_non_nullable
+      faxNumber: null == faxNumber
+          ? _value.faxNumber
+          : faxNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      a5: null == a5
-          ? _value.a5
-          : a5 // ignore: cast_nullable_to_non_nullable
+      email: null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
-      a6: null == a6
-          ? _value.a6
-          : a6 // ignore: cast_nullable_to_non_nullable
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -317,38 +317,38 @@ abstract class _$$_CompanyCopyWith<$Res> implements $CompanyCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: '出表日期') String a,
+      {@JsonKey(name: '出表日期') String publicationDate,
       @JsonKey(name: '公司代號') String code,
       @JsonKey(name: '公司名稱') String name,
-      @JsonKey(name: '公司簡稱') String d,
-      @JsonKey(name: '外國企業註冊地國') String e,
+      @JsonKey(name: '公司簡稱') String abbreviationName,
+      @JsonKey(name: '外國企業註冊地國') String registrationCountry,
       @JsonKey(name: '產業別') Industry industry,
-      @JsonKey(name: '住址') String g,
-      @JsonKey(name: '營利事業統一編號') String h,
-      @JsonKey(name: '董事長') String i,
-      @JsonKey(name: '總經理') String j,
-      @JsonKey(name: '發言人') String k,
-      @JsonKey(name: '發言人職稱') String l,
-      @JsonKey(name: '代理發言人') String m,
-      @JsonKey(name: '總機電話') String n,
-      @JsonKey(name: '成立日期') String o,
-      @JsonKey(name: '上市日期') String p,
-      @JsonKey(name: '普通股每股面額') String q,
-      @JsonKey(name: '實收資本額') String r,
-      @JsonKey(name: '私募股數') String s,
-      @JsonKey(name: '特別股') String t,
-      @JsonKey(name: '編制財務報表類型') String u,
-      @JsonKey(name: '股票過戶機構') String v,
-      @JsonKey(name: '過戶電話') String w,
-      @JsonKey(name: '過戶地址') String x,
-      @JsonKey(name: '簽證會計師事務所') String y,
-      @JsonKey(name: '簽證會計師1') String z,
-      @JsonKey(name: '簽證會計師2') String a1,
-      @JsonKey(name: '英文簡稱') String a2,
-      @JsonKey(name: '英文通訊地址') String a3,
-      @JsonKey(name: '傳真機號碼') String a4,
-      @JsonKey(name: '電子郵件信箱') String a5,
-      @JsonKey(name: '網址') String a6});
+      @JsonKey(name: '住址') String address,
+      @JsonKey(name: '營利事業統一編號') String taxId,
+      @JsonKey(name: '董事長') String chairman,
+      @JsonKey(name: '總經理') String generalManager,
+      @JsonKey(name: '發言人') String spokesman,
+      @JsonKey(name: '發言人職稱') String spokesmanTitle,
+      @JsonKey(name: '代理發言人') String proxySpokesman,
+      @JsonKey(name: '總機電話') String centralPhoneNumber,
+      @JsonKey(name: '成立日期') String establishmentDate,
+      @JsonKey(name: '上市日期') String listingDate,
+      @JsonKey(name: '普通股每股面額') String perValuePerShare,
+      @JsonKey(name: '實收資本額') String contributedCapital,
+      @JsonKey(name: '私募股數') String privateShare,
+      @JsonKey(name: '特別股') String preferredStock,
+      @JsonKey(name: '編制財務報表類型') String financialStatementType,
+      @JsonKey(name: '股票過戶機構') String stockTransferAgency,
+      @JsonKey(name: '過戶電話') String transferPhoneNumber,
+      @JsonKey(name: '過戶地址') String transferAddress,
+      @JsonKey(name: '簽證會計師事務所') String accountingFirm,
+      @JsonKey(name: '簽證會計師1') String accountantOne,
+      @JsonKey(name: '簽證會計師2') String accountTwo,
+      @JsonKey(name: '英文簡稱') String englishAbbreviation,
+      @JsonKey(name: '英文通訊地址') String englishAddress,
+      @JsonKey(name: '傳真機號碼') String faxNumber,
+      @JsonKey(name: '電子郵件信箱') String email,
+      @JsonKey(name: '網址') String url});
 }
 
 /// @nodoc
@@ -361,43 +361,43 @@ class __$$_CompanyCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? a = null,
+    Object? publicationDate = null,
     Object? code = null,
     Object? name = null,
-    Object? d = null,
-    Object? e = null,
+    Object? abbreviationName = null,
+    Object? registrationCountry = null,
     Object? industry = null,
-    Object? g = null,
-    Object? h = null,
-    Object? i = null,
-    Object? j = null,
-    Object? k = null,
-    Object? l = null,
-    Object? m = null,
-    Object? n = null,
-    Object? o = null,
-    Object? p = null,
-    Object? q = null,
-    Object? r = null,
-    Object? s = null,
-    Object? t = null,
-    Object? u = null,
-    Object? v = null,
-    Object? w = null,
-    Object? x = null,
-    Object? y = null,
-    Object? z = null,
-    Object? a1 = null,
-    Object? a2 = null,
-    Object? a3 = null,
-    Object? a4 = null,
-    Object? a5 = null,
-    Object? a6 = null,
+    Object? address = null,
+    Object? taxId = null,
+    Object? chairman = null,
+    Object? generalManager = null,
+    Object? spokesman = null,
+    Object? spokesmanTitle = null,
+    Object? proxySpokesman = null,
+    Object? centralPhoneNumber = null,
+    Object? establishmentDate = null,
+    Object? listingDate = null,
+    Object? perValuePerShare = null,
+    Object? contributedCapital = null,
+    Object? privateShare = null,
+    Object? preferredStock = null,
+    Object? financialStatementType = null,
+    Object? stockTransferAgency = null,
+    Object? transferPhoneNumber = null,
+    Object? transferAddress = null,
+    Object? accountingFirm = null,
+    Object? accountantOne = null,
+    Object? accountTwo = null,
+    Object? englishAbbreviation = null,
+    Object? englishAddress = null,
+    Object? faxNumber = null,
+    Object? email = null,
+    Object? url = null,
   }) {
     return _then(_$_Company(
-      null == a
-          ? _value.a
-          : a // ignore: cast_nullable_to_non_nullable
+      null == publicationDate
+          ? _value.publicationDate
+          : publicationDate // ignore: cast_nullable_to_non_nullable
               as String,
       null == code
           ? _value.code
@@ -407,121 +407,121 @@ class __$$_CompanyCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      null == d
-          ? _value.d
-          : d // ignore: cast_nullable_to_non_nullable
+      null == abbreviationName
+          ? _value.abbreviationName
+          : abbreviationName // ignore: cast_nullable_to_non_nullable
               as String,
-      null == e
-          ? _value.e
-          : e // ignore: cast_nullable_to_non_nullable
+      null == registrationCountry
+          ? _value.registrationCountry
+          : registrationCountry // ignore: cast_nullable_to_non_nullable
               as String,
       null == industry
           ? _value.industry
           : industry // ignore: cast_nullable_to_non_nullable
               as Industry,
-      null == g
-          ? _value.g
-          : g // ignore: cast_nullable_to_non_nullable
+      null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
               as String,
-      null == h
-          ? _value.h
-          : h // ignore: cast_nullable_to_non_nullable
+      null == taxId
+          ? _value.taxId
+          : taxId // ignore: cast_nullable_to_non_nullable
               as String,
-      null == i
-          ? _value.i
-          : i // ignore: cast_nullable_to_non_nullable
+      null == chairman
+          ? _value.chairman
+          : chairman // ignore: cast_nullable_to_non_nullable
               as String,
-      null == j
-          ? _value.j
-          : j // ignore: cast_nullable_to_non_nullable
+      null == generalManager
+          ? _value.generalManager
+          : generalManager // ignore: cast_nullable_to_non_nullable
               as String,
-      null == k
-          ? _value.k
-          : k // ignore: cast_nullable_to_non_nullable
+      null == spokesman
+          ? _value.spokesman
+          : spokesman // ignore: cast_nullable_to_non_nullable
               as String,
-      null == l
-          ? _value.l
-          : l // ignore: cast_nullable_to_non_nullable
+      null == spokesmanTitle
+          ? _value.spokesmanTitle
+          : spokesmanTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      null == m
-          ? _value.m
-          : m // ignore: cast_nullable_to_non_nullable
+      null == proxySpokesman
+          ? _value.proxySpokesman
+          : proxySpokesman // ignore: cast_nullable_to_non_nullable
               as String,
-      null == n
-          ? _value.n
-          : n // ignore: cast_nullable_to_non_nullable
+      null == centralPhoneNumber
+          ? _value.centralPhoneNumber
+          : centralPhoneNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      null == o
-          ? _value.o
-          : o // ignore: cast_nullable_to_non_nullable
+      null == establishmentDate
+          ? _value.establishmentDate
+          : establishmentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      null == p
-          ? _value.p
-          : p // ignore: cast_nullable_to_non_nullable
+      null == listingDate
+          ? _value.listingDate
+          : listingDate // ignore: cast_nullable_to_non_nullable
               as String,
-      null == q
-          ? _value.q
-          : q // ignore: cast_nullable_to_non_nullable
+      null == perValuePerShare
+          ? _value.perValuePerShare
+          : perValuePerShare // ignore: cast_nullable_to_non_nullable
               as String,
-      null == r
-          ? _value.r
-          : r // ignore: cast_nullable_to_non_nullable
+      null == contributedCapital
+          ? _value.contributedCapital
+          : contributedCapital // ignore: cast_nullable_to_non_nullable
               as String,
-      null == s
-          ? _value.s
-          : s // ignore: cast_nullable_to_non_nullable
+      null == privateShare
+          ? _value.privateShare
+          : privateShare // ignore: cast_nullable_to_non_nullable
               as String,
-      null == t
-          ? _value.t
-          : t // ignore: cast_nullable_to_non_nullable
+      null == preferredStock
+          ? _value.preferredStock
+          : preferredStock // ignore: cast_nullable_to_non_nullable
               as String,
-      null == u
-          ? _value.u
-          : u // ignore: cast_nullable_to_non_nullable
+      null == financialStatementType
+          ? _value.financialStatementType
+          : financialStatementType // ignore: cast_nullable_to_non_nullable
               as String,
-      null == v
-          ? _value.v
-          : v // ignore: cast_nullable_to_non_nullable
+      null == stockTransferAgency
+          ? _value.stockTransferAgency
+          : stockTransferAgency // ignore: cast_nullable_to_non_nullable
               as String,
-      null == w
-          ? _value.w
-          : w // ignore: cast_nullable_to_non_nullable
+      null == transferPhoneNumber
+          ? _value.transferPhoneNumber
+          : transferPhoneNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      null == x
-          ? _value.x
-          : x // ignore: cast_nullable_to_non_nullable
+      null == transferAddress
+          ? _value.transferAddress
+          : transferAddress // ignore: cast_nullable_to_non_nullable
               as String,
-      null == y
-          ? _value.y
-          : y // ignore: cast_nullable_to_non_nullable
+      null == accountingFirm
+          ? _value.accountingFirm
+          : accountingFirm // ignore: cast_nullable_to_non_nullable
               as String,
-      null == z
-          ? _value.z
-          : z // ignore: cast_nullable_to_non_nullable
+      null == accountantOne
+          ? _value.accountantOne
+          : accountantOne // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a1
-          ? _value.a1
-          : a1 // ignore: cast_nullable_to_non_nullable
+      null == accountTwo
+          ? _value.accountTwo
+          : accountTwo // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a2
-          ? _value.a2
-          : a2 // ignore: cast_nullable_to_non_nullable
+      null == englishAbbreviation
+          ? _value.englishAbbreviation
+          : englishAbbreviation // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a3
-          ? _value.a3
-          : a3 // ignore: cast_nullable_to_non_nullable
+      null == englishAddress
+          ? _value.englishAddress
+          : englishAddress // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a4
-          ? _value.a4
-          : a4 // ignore: cast_nullable_to_non_nullable
+      null == faxNumber
+          ? _value.faxNumber
+          : faxNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a5
-          ? _value.a5
-          : a5 // ignore: cast_nullable_to_non_nullable
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
               as String,
-      null == a6
-          ? _value.a6
-          : a6 // ignore: cast_nullable_to_non_nullable
+      null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -531,45 +531,45 @@ class __$$_CompanyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Company implements _Company {
   const _$_Company(
-      @JsonKey(name: '出表日期') this.a,
+      @JsonKey(name: '出表日期') this.publicationDate,
       @JsonKey(name: '公司代號') this.code,
       @JsonKey(name: '公司名稱') this.name,
-      @JsonKey(name: '公司簡稱') this.d,
-      @JsonKey(name: '外國企業註冊地國') this.e,
+      @JsonKey(name: '公司簡稱') this.abbreviationName,
+      @JsonKey(name: '外國企業註冊地國') this.registrationCountry,
       @JsonKey(name: '產業別') this.industry,
-      @JsonKey(name: '住址') this.g,
-      @JsonKey(name: '營利事業統一編號') this.h,
-      @JsonKey(name: '董事長') this.i,
-      @JsonKey(name: '總經理') this.j,
-      @JsonKey(name: '發言人') this.k,
-      @JsonKey(name: '發言人職稱') this.l,
-      @JsonKey(name: '代理發言人') this.m,
-      @JsonKey(name: '總機電話') this.n,
-      @JsonKey(name: '成立日期') this.o,
-      @JsonKey(name: '上市日期') this.p,
-      @JsonKey(name: '普通股每股面額') this.q,
-      @JsonKey(name: '實收資本額') this.r,
-      @JsonKey(name: '私募股數') this.s,
-      @JsonKey(name: '特別股') this.t,
-      @JsonKey(name: '編制財務報表類型') this.u,
-      @JsonKey(name: '股票過戶機構') this.v,
-      @JsonKey(name: '過戶電話') this.w,
-      @JsonKey(name: '過戶地址') this.x,
-      @JsonKey(name: '簽證會計師事務所') this.y,
-      @JsonKey(name: '簽證會計師1') this.z,
-      @JsonKey(name: '簽證會計師2') this.a1,
-      @JsonKey(name: '英文簡稱') this.a2,
-      @JsonKey(name: '英文通訊地址') this.a3,
-      @JsonKey(name: '傳真機號碼') this.a4,
-      @JsonKey(name: '電子郵件信箱') this.a5,
-      @JsonKey(name: '網址') this.a6);
+      @JsonKey(name: '住址') this.address,
+      @JsonKey(name: '營利事業統一編號') this.taxId,
+      @JsonKey(name: '董事長') this.chairman,
+      @JsonKey(name: '總經理') this.generalManager,
+      @JsonKey(name: '發言人') this.spokesman,
+      @JsonKey(name: '發言人職稱') this.spokesmanTitle,
+      @JsonKey(name: '代理發言人') this.proxySpokesman,
+      @JsonKey(name: '總機電話') this.centralPhoneNumber,
+      @JsonKey(name: '成立日期') this.establishmentDate,
+      @JsonKey(name: '上市日期') this.listingDate,
+      @JsonKey(name: '普通股每股面額') this.perValuePerShare,
+      @JsonKey(name: '實收資本額') this.contributedCapital,
+      @JsonKey(name: '私募股數') this.privateShare,
+      @JsonKey(name: '特別股') this.preferredStock,
+      @JsonKey(name: '編制財務報表類型') this.financialStatementType,
+      @JsonKey(name: '股票過戶機構') this.stockTransferAgency,
+      @JsonKey(name: '過戶電話') this.transferPhoneNumber,
+      @JsonKey(name: '過戶地址') this.transferAddress,
+      @JsonKey(name: '簽證會計師事務所') this.accountingFirm,
+      @JsonKey(name: '簽證會計師1') this.accountantOne,
+      @JsonKey(name: '簽證會計師2') this.accountTwo,
+      @JsonKey(name: '英文簡稱') this.englishAbbreviation,
+      @JsonKey(name: '英文通訊地址') this.englishAddress,
+      @JsonKey(name: '傳真機號碼') this.faxNumber,
+      @JsonKey(name: '電子郵件信箱') this.email,
+      @JsonKey(name: '網址') this.url);
 
   factory _$_Company.fromJson(Map<String, dynamic> json) =>
       _$$_CompanyFromJson(json);
 
   @override
   @JsonKey(name: '出表日期')
-  final String a;
+  final String publicationDate;
   @override
   @JsonKey(name: '公司代號')
   final String code;
@@ -578,95 +578,95 @@ class _$_Company implements _Company {
   final String name;
   @override
   @JsonKey(name: '公司簡稱')
-  final String d;
+  final String abbreviationName;
   @override
   @JsonKey(name: '外國企業註冊地國')
-  final String e;
+  final String registrationCountry;
   @override
   @JsonKey(name: '產業別')
   final Industry industry;
   @override
   @JsonKey(name: '住址')
-  final String g;
+  final String address;
   @override
   @JsonKey(name: '營利事業統一編號')
-  final String h;
+  final String taxId;
   @override
   @JsonKey(name: '董事長')
-  final String i;
+  final String chairman;
   @override
   @JsonKey(name: '總經理')
-  final String j;
+  final String generalManager;
   @override
   @JsonKey(name: '發言人')
-  final String k;
+  final String spokesman;
   @override
   @JsonKey(name: '發言人職稱')
-  final String l;
+  final String spokesmanTitle;
   @override
   @JsonKey(name: '代理發言人')
-  final String m;
+  final String proxySpokesman;
   @override
   @JsonKey(name: '總機電話')
-  final String n;
+  final String centralPhoneNumber;
   @override
   @JsonKey(name: '成立日期')
-  final String o;
+  final String establishmentDate;
   @override
   @JsonKey(name: '上市日期')
-  final String p;
+  final String listingDate;
   @override
   @JsonKey(name: '普通股每股面額')
-  final String q;
+  final String perValuePerShare;
   @override
   @JsonKey(name: '實收資本額')
-  final String r;
+  final String contributedCapital;
   @override
   @JsonKey(name: '私募股數')
-  final String s;
+  final String privateShare;
   @override
   @JsonKey(name: '特別股')
-  final String t;
+  final String preferredStock;
   @override
   @JsonKey(name: '編制財務報表類型')
-  final String u;
+  final String financialStatementType;
   @override
   @JsonKey(name: '股票過戶機構')
-  final String v;
+  final String stockTransferAgency;
   @override
   @JsonKey(name: '過戶電話')
-  final String w;
+  final String transferPhoneNumber;
   @override
   @JsonKey(name: '過戶地址')
-  final String x;
+  final String transferAddress;
   @override
   @JsonKey(name: '簽證會計師事務所')
-  final String y;
+  final String accountingFirm;
   @override
   @JsonKey(name: '簽證會計師1')
-  final String z;
+  final String accountantOne;
   @override
   @JsonKey(name: '簽證會計師2')
-  final String a1;
+  final String accountTwo;
   @override
   @JsonKey(name: '英文簡稱')
-  final String a2;
+  final String englishAbbreviation;
   @override
   @JsonKey(name: '英文通訊地址')
-  final String a3;
+  final String englishAddress;
   @override
   @JsonKey(name: '傳真機號碼')
-  final String a4;
+  final String faxNumber;
   @override
   @JsonKey(name: '電子郵件信箱')
-  final String a5;
+  final String email;
   @override
   @JsonKey(name: '網址')
-  final String a6;
+  final String url;
 
   @override
   String toString() {
-    return 'Company(a: $a, code: $code, name: $name, d: $d, e: $e, industry: $industry, g: $g, h: $h, i: $i, j: $j, k: $k, l: $l, m: $m, n: $n, o: $o, p: $p, q: $q, r: $r, s: $s, t: $t, u: $u, v: $v, w: $w, x: $x, y: $y, z: $z, a1: $a1, a2: $a2, a3: $a3, a4: $a4, a5: $a5, a6: $a6)';
+    return 'Company(publicationDate: $publicationDate, code: $code, name: $name, abbreviationName: $abbreviationName, registrationCountry: $registrationCountry, industry: $industry, address: $address, taxId: $taxId, chairman: $chairman, generalManager: $generalManager, spokesman: $spokesman, spokesmanTitle: $spokesmanTitle, proxySpokesman: $proxySpokesman, centralPhoneNumber: $centralPhoneNumber, establishmentDate: $establishmentDate, listingDate: $listingDate, perValuePerShare: $perValuePerShare, contributedCapital: $contributedCapital, privateShare: $privateShare, preferredStock: $preferredStock, financialStatementType: $financialStatementType, stockTransferAgency: $stockTransferAgency, transferPhoneNumber: $transferPhoneNumber, transferAddress: $transferAddress, accountingFirm: $accountingFirm, accountantOne: $accountantOne, accountTwo: $accountTwo, englishAbbreviation: $englishAbbreviation, englishAddress: $englishAddress, faxNumber: $faxNumber, email: $email, url: $url)';
   }
 
   @override
@@ -674,77 +674,102 @@ class _$_Company implements _Company {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Company &&
-            (identical(other.a, a) || other.a == a) &&
+            (identical(other.publicationDate, publicationDate) ||
+                other.publicationDate == publicationDate) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.d, d) || other.d == d) &&
-            (identical(other.e, e) || other.e == e) &&
+            (identical(other.abbreviationName, abbreviationName) ||
+                other.abbreviationName == abbreviationName) &&
+            (identical(other.registrationCountry, registrationCountry) ||
+                other.registrationCountry == registrationCountry) &&
             (identical(other.industry, industry) ||
                 other.industry == industry) &&
-            (identical(other.g, g) || other.g == g) &&
-            (identical(other.h, h) || other.h == h) &&
-            (identical(other.i, i) || other.i == i) &&
-            (identical(other.j, j) || other.j == j) &&
-            (identical(other.k, k) || other.k == k) &&
-            (identical(other.l, l) || other.l == l) &&
-            (identical(other.m, m) || other.m == m) &&
-            (identical(other.n, n) || other.n == n) &&
-            (identical(other.o, o) || other.o == o) &&
-            (identical(other.p, p) || other.p == p) &&
-            (identical(other.q, q) || other.q == q) &&
-            (identical(other.r, r) || other.r == r) &&
-            (identical(other.s, s) || other.s == s) &&
-            (identical(other.t, t) || other.t == t) &&
-            (identical(other.u, u) || other.u == u) &&
-            (identical(other.v, v) || other.v == v) &&
-            (identical(other.w, w) || other.w == w) &&
-            (identical(other.x, x) || other.x == x) &&
-            (identical(other.y, y) || other.y == y) &&
-            (identical(other.z, z) || other.z == z) &&
-            (identical(other.a1, a1) || other.a1 == a1) &&
-            (identical(other.a2, a2) || other.a2 == a2) &&
-            (identical(other.a3, a3) || other.a3 == a3) &&
-            (identical(other.a4, a4) || other.a4 == a4) &&
-            (identical(other.a5, a5) || other.a5 == a5) &&
-            (identical(other.a6, a6) || other.a6 == a6));
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.taxId, taxId) || other.taxId == taxId) &&
+            (identical(other.chairman, chairman) ||
+                other.chairman == chairman) &&
+            (identical(other.generalManager, generalManager) ||
+                other.generalManager == generalManager) &&
+            (identical(other.spokesman, spokesman) ||
+                other.spokesman == spokesman) &&
+            (identical(other.spokesmanTitle, spokesmanTitle) ||
+                other.spokesmanTitle == spokesmanTitle) &&
+            (identical(other.proxySpokesman, proxySpokesman) ||
+                other.proxySpokesman == proxySpokesman) &&
+            (identical(other.centralPhoneNumber, centralPhoneNumber) ||
+                other.centralPhoneNumber == centralPhoneNumber) &&
+            (identical(other.establishmentDate, establishmentDate) ||
+                other.establishmentDate == establishmentDate) &&
+            (identical(other.listingDate, listingDate) ||
+                other.listingDate == listingDate) &&
+            (identical(other.perValuePerShare, perValuePerShare) ||
+                other.perValuePerShare == perValuePerShare) &&
+            (identical(other.contributedCapital, contributedCapital) ||
+                other.contributedCapital == contributedCapital) &&
+            (identical(other.privateShare, privateShare) ||
+                other.privateShare == privateShare) &&
+            (identical(other.preferredStock, preferredStock) ||
+                other.preferredStock == preferredStock) &&
+            (identical(other.financialStatementType, financialStatementType) ||
+                other.financialStatementType == financialStatementType) &&
+            (identical(other.stockTransferAgency, stockTransferAgency) ||
+                other.stockTransferAgency == stockTransferAgency) &&
+            (identical(other.transferPhoneNumber, transferPhoneNumber) ||
+                other.transferPhoneNumber == transferPhoneNumber) &&
+            (identical(other.transferAddress, transferAddress) ||
+                other.transferAddress == transferAddress) &&
+            (identical(other.accountingFirm, accountingFirm) ||
+                other.accountingFirm == accountingFirm) &&
+            (identical(other.accountantOne, accountantOne) ||
+                other.accountantOne == accountantOne) &&
+            (identical(other.accountTwo, accountTwo) ||
+                other.accountTwo == accountTwo) &&
+            (identical(other.englishAbbreviation, englishAbbreviation) ||
+                other.englishAbbreviation == englishAbbreviation) &&
+            (identical(other.englishAddress, englishAddress) ||
+                other.englishAddress == englishAddress) &&
+            (identical(other.faxNumber, faxNumber) ||
+                other.faxNumber == faxNumber) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        a,
+        publicationDate,
         code,
         name,
-        d,
-        e,
+        abbreviationName,
+        registrationCountry,
         industry,
-        g,
-        h,
-        i,
-        j,
-        k,
-        l,
-        m,
-        n,
-        o,
-        p,
-        q,
-        r,
-        s,
-        t,
-        u,
-        v,
-        w,
-        x,
-        y,
-        z,
-        a1,
-        a2,
-        a3,
-        a4,
-        a5,
-        a6
+        address,
+        taxId,
+        chairman,
+        generalManager,
+        spokesman,
+        spokesmanTitle,
+        proxySpokesman,
+        centralPhoneNumber,
+        establishmentDate,
+        listingDate,
+        perValuePerShare,
+        contributedCapital,
+        privateShare,
+        preferredStock,
+        financialStatementType,
+        stockTransferAgency,
+        transferPhoneNumber,
+        transferAddress,
+        accountingFirm,
+        accountantOne,
+        accountTwo,
+        englishAbbreviation,
+        englishAddress,
+        faxNumber,
+        email,
+        url
       ]);
 
   @JsonKey(ignore: true)
@@ -763,44 +788,44 @@ class _$_Company implements _Company {
 
 abstract class _Company implements Company {
   const factory _Company(
-      @JsonKey(name: '出表日期') final String a,
+      @JsonKey(name: '出表日期') final String publicationDate,
       @JsonKey(name: '公司代號') final String code,
       @JsonKey(name: '公司名稱') final String name,
-      @JsonKey(name: '公司簡稱') final String d,
-      @JsonKey(name: '外國企業註冊地國') final String e,
+      @JsonKey(name: '公司簡稱') final String abbreviationName,
+      @JsonKey(name: '外國企業註冊地國') final String registrationCountry,
       @JsonKey(name: '產業別') final Industry industry,
-      @JsonKey(name: '住址') final String g,
-      @JsonKey(name: '營利事業統一編號') final String h,
-      @JsonKey(name: '董事長') final String i,
-      @JsonKey(name: '總經理') final String j,
-      @JsonKey(name: '發言人') final String k,
-      @JsonKey(name: '發言人職稱') final String l,
-      @JsonKey(name: '代理發言人') final String m,
-      @JsonKey(name: '總機電話') final String n,
-      @JsonKey(name: '成立日期') final String o,
-      @JsonKey(name: '上市日期') final String p,
-      @JsonKey(name: '普通股每股面額') final String q,
-      @JsonKey(name: '實收資本額') final String r,
-      @JsonKey(name: '私募股數') final String s,
-      @JsonKey(name: '特別股') final String t,
-      @JsonKey(name: '編制財務報表類型') final String u,
-      @JsonKey(name: '股票過戶機構') final String v,
-      @JsonKey(name: '過戶電話') final String w,
-      @JsonKey(name: '過戶地址') final String x,
-      @JsonKey(name: '簽證會計師事務所') final String y,
-      @JsonKey(name: '簽證會計師1') final String z,
-      @JsonKey(name: '簽證會計師2') final String a1,
-      @JsonKey(name: '英文簡稱') final String a2,
-      @JsonKey(name: '英文通訊地址') final String a3,
-      @JsonKey(name: '傳真機號碼') final String a4,
-      @JsonKey(name: '電子郵件信箱') final String a5,
-      @JsonKey(name: '網址') final String a6) = _$_Company;
+      @JsonKey(name: '住址') final String address,
+      @JsonKey(name: '營利事業統一編號') final String taxId,
+      @JsonKey(name: '董事長') final String chairman,
+      @JsonKey(name: '總經理') final String generalManager,
+      @JsonKey(name: '發言人') final String spokesman,
+      @JsonKey(name: '發言人職稱') final String spokesmanTitle,
+      @JsonKey(name: '代理發言人') final String proxySpokesman,
+      @JsonKey(name: '總機電話') final String centralPhoneNumber,
+      @JsonKey(name: '成立日期') final String establishmentDate,
+      @JsonKey(name: '上市日期') final String listingDate,
+      @JsonKey(name: '普通股每股面額') final String perValuePerShare,
+      @JsonKey(name: '實收資本額') final String contributedCapital,
+      @JsonKey(name: '私募股數') final String privateShare,
+      @JsonKey(name: '特別股') final String preferredStock,
+      @JsonKey(name: '編制財務報表類型') final String financialStatementType,
+      @JsonKey(name: '股票過戶機構') final String stockTransferAgency,
+      @JsonKey(name: '過戶電話') final String transferPhoneNumber,
+      @JsonKey(name: '過戶地址') final String transferAddress,
+      @JsonKey(name: '簽證會計師事務所') final String accountingFirm,
+      @JsonKey(name: '簽證會計師1') final String accountantOne,
+      @JsonKey(name: '簽證會計師2') final String accountTwo,
+      @JsonKey(name: '英文簡稱') final String englishAbbreviation,
+      @JsonKey(name: '英文通訊地址') final String englishAddress,
+      @JsonKey(name: '傳真機號碼') final String faxNumber,
+      @JsonKey(name: '電子郵件信箱') final String email,
+      @JsonKey(name: '網址') final String url) = _$_Company;
 
   factory _Company.fromJson(Map<String, dynamic> json) = _$_Company.fromJson;
 
   @override
   @JsonKey(name: '出表日期')
-  String get a;
+  String get publicationDate;
   @override
   @JsonKey(name: '公司代號')
   String get code;
@@ -809,91 +834,91 @@ abstract class _Company implements Company {
   String get name;
   @override
   @JsonKey(name: '公司簡稱')
-  String get d;
+  String get abbreviationName;
   @override
   @JsonKey(name: '外國企業註冊地國')
-  String get e;
+  String get registrationCountry;
   @override
   @JsonKey(name: '產業別')
   Industry get industry;
   @override
   @JsonKey(name: '住址')
-  String get g;
+  String get address;
   @override
   @JsonKey(name: '營利事業統一編號')
-  String get h;
+  String get taxId;
   @override
   @JsonKey(name: '董事長')
-  String get i;
+  String get chairman;
   @override
   @JsonKey(name: '總經理')
-  String get j;
+  String get generalManager;
   @override
   @JsonKey(name: '發言人')
-  String get k;
+  String get spokesman;
   @override
   @JsonKey(name: '發言人職稱')
-  String get l;
+  String get spokesmanTitle;
   @override
   @JsonKey(name: '代理發言人')
-  String get m;
+  String get proxySpokesman;
   @override
   @JsonKey(name: '總機電話')
-  String get n;
+  String get centralPhoneNumber;
   @override
   @JsonKey(name: '成立日期')
-  String get o;
+  String get establishmentDate;
   @override
   @JsonKey(name: '上市日期')
-  String get p;
+  String get listingDate;
   @override
   @JsonKey(name: '普通股每股面額')
-  String get q;
+  String get perValuePerShare;
   @override
   @JsonKey(name: '實收資本額')
-  String get r;
+  String get contributedCapital;
   @override
   @JsonKey(name: '私募股數')
-  String get s;
+  String get privateShare;
   @override
   @JsonKey(name: '特別股')
-  String get t;
+  String get preferredStock;
   @override
   @JsonKey(name: '編制財務報表類型')
-  String get u;
+  String get financialStatementType;
   @override
   @JsonKey(name: '股票過戶機構')
-  String get v;
+  String get stockTransferAgency;
   @override
   @JsonKey(name: '過戶電話')
-  String get w;
+  String get transferPhoneNumber;
   @override
   @JsonKey(name: '過戶地址')
-  String get x;
+  String get transferAddress;
   @override
   @JsonKey(name: '簽證會計師事務所')
-  String get y;
+  String get accountingFirm;
   @override
   @JsonKey(name: '簽證會計師1')
-  String get z;
+  String get accountantOne;
   @override
   @JsonKey(name: '簽證會計師2')
-  String get a1;
+  String get accountTwo;
   @override
   @JsonKey(name: '英文簡稱')
-  String get a2;
+  String get englishAbbreviation;
   @override
   @JsonKey(name: '英文通訊地址')
-  String get a3;
+  String get englishAddress;
   @override
   @JsonKey(name: '傳真機號碼')
-  String get a4;
+  String get faxNumber;
   @override
   @JsonKey(name: '電子郵件信箱')
-  String get a5;
+  String get email;
   @override
   @JsonKey(name: '網址')
-  String get a6;
+  String get url;
   @override
   @JsonKey(ignore: true)
   _$$_CompanyCopyWith<_$_Company> get copyWith =>

@@ -10,6 +10,9 @@ import '../../../core/repository/basic_info_repository.dart';
 
 part 'get_all_info_cubit.freezed.dart';
 
+/*
+Cubit for get all public company info.
+*/
 class GetAllInfoCubit extends Cubit<GetAllInfoState> {
   late final BasicInfoRepository _basicInfoRepository;
 

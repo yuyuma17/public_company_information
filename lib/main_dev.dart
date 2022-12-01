@@ -6,7 +6,7 @@ import 'app.dart';
 
 Future main() async {
   // Load the environment variables of the build flavour.
-  await dotenv.load(fileName: '.env');
+  await dotenv.load(fileName: 'dev.env');
 
   // Make sure the instance of WidgetsBinding before calling native code.
   WidgetsFlutterBinding.ensureInitialized();

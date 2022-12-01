@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'company_info_page.dart';
 import '../../../core/entities/company.dart';
 
 class SpecificIndustryPage extends StatelessWidget {
@@ -37,13 +38,19 @@ class _CompanyList extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         final company = companies[index];
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            final args = {'company': company};
+            Navigator.of(context).pushNamed(
+              CompanyInfoPage.routeName,
+              arguments: args,
+            );
+          },
           child: Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 8.0,
               horizontal: 15.0,
             ),
-            child: Text('${company.code} ${company.name}'),
+            child: Text('${company.code} ${company.abbreviationName}'),
           ),
         );
       },

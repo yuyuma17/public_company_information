@@ -11,6 +11,7 @@ abstract class BasicInfoRemoteDataStore {
     return _BasicInfoRemoteDataStore(dio);
   }
 
+  // 公開發行公司基本資料
   @GET('opendata/t187ap03_P')
   Future<List<Company>> getAllPublicCompanyInformation();
 }

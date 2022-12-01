@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ApiClient {
   final client = Dio(
     BaseOptions(
-      baseUrl: 'https://openapi.twse.com.tw/v1/',
+      baseUrl: dotenv.get('BASE_URL'),
       connectTimeout: 60000,
     ),
   );

@@ -19,6 +19,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+    // Call getAllPublicCompanyInformation API when initState.
     context.read<GetAllInfoCubit>().getAllPublicCompanyInformation();
   }
 
@@ -27,6 +28,7 @@ class _SplashPageState extends State<SplashPage> {
     return BlocListener<GetAllInfoCubit, GetAllInfoState>(
       listener: (context, state) {
         state.whenOrNull(
+          // When success, navigate to main page.
           success: (_) {
             Navigator.of(context).pushReplacementNamed(MainPage.routeName);
           },

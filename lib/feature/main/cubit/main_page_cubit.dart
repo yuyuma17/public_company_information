@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import '../../follow/pages/followed_page.dart';
 import '../../info/pages/all_industry_page.dart';
 
+/*
+Cubit for MainPage showing and BottomNavigationBar currentIndex.
+*/
 class MainPageCubit extends Cubit<int> {
   MainPageCubit() : super(0);
 

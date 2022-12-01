@@ -13,7 +13,7 @@ main() {
     });
 
     blocTest(
-      'Test: state is [] when bloc is created.',
+      'Test: emits [] when nothing is added',
       build: () => cubit,
       expect: () => [],
     );

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:public_company_information/core/entities/enum/Industry.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 import '../widgets/info_item.dart';
+import '../../../core/entities/enum/Industry.dart';
 import '../../../core/entities/company.dart';
 import '../../follow/cubit/follow_cubit.dart';
 import '../../../core/utils/general_dialog.dart';

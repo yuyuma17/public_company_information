@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:public_company_information/core/utils/general_dialog.dart';
 
 import '../../../core/entities/company.dart';
 import '../../follow/cubit/follow_cubit.dart';
@@ -42,8 +43,8 @@ class _FollowButton extends StatelessWidget {
         return IconButton(
           onPressed: () {
             isFollowed
-                ? context.read<FollowCubit>().unFollow(company)
-                : context.read<FollowCubit>().follow(company);
+                ? showUnFollowDialog(context, target: company)
+                : showFollowDialog(context, target: company);
           },
           icon: Icon(isFollowed ? Icons.star : Icons.star_border),
         );

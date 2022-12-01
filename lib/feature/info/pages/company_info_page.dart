@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/info_item.dart';
-import '../../../core/entities/enum/Industry.dart';
 import '../../../core/entities/company.dart';
 import '../../follow/cubit/follow_cubit.dart';
 import '../../../core/utils/general_dialog.dart';
@@ -28,53 +26,46 @@ class CompanyInfoPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _BasicInfo(company),
+              BasicInfo(company),
               const _VerticalSpace(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InfoItem(
-                    title: '董事長',
-                    info: company.chairman,
-                    hasWidthLimit: true,
-                  ),
+                  ChairmanItem(company),
                   const _HorizontalSpace(),
-                  InfoItem(
-                    title: '總經理',
-                    info: company.generalManager,
-                    hasWidthLimit: true,
-                  ),
+                  GeneralManagerItem(company),
                   const _HorizontalSpace(),
-                  InfoItem(
-                    title: '產業類別',
-                    info: company.industry.chineseName,
-                    hasWidthLimit: true,
-                  ),
+                  IndustryItem(company),
                 ],
               ),
-              const _VerticalSpace(),
-              const Divider(),
               const _VerticalSpace(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InfoItem(
-                    title: '總機',
-                    info: company.centralPhoneNumber,
-                    hasWidthLimit: true,
-                  ),
+                  EstablishmentDateItem(company),
                   const _HorizontalSpace(),
-                  InfoItem(
-                    title: '統一編號',
-                    info: company.taxId,
-                    hasWidthLimit: true,
-                  ),
+                  ListingDateItem(company),
+                ],
+              ),
+              const _Divider(),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CentralPhoneNumberItem(company),
+                  const _HorizontalSpace(),
+                  TaxIdItem(company),
                 ],
               ),
               const _VerticalSpace(),
-              InfoItem(title: '地址', info: company.address),
+              AddressItem(company),
+              const _Divider(),
+              ContributedCapitalItem(company),
               const _VerticalSpace(),
-              const Divider(),
+              PerValuePerShareItem(company),
+              const _VerticalSpace(),
+              IssuedShareItem(company),
+              const _VerticalSpace(),
+              PreferredStockItem(company),
             ],
           ),
         ),
@@ -112,51 +103,12 @@ class _FollowButton extends StatelessWidget {
   }
 }
 
-class _BasicInfo extends StatelessWidget {
-  final Company company;
-  const _BasicInfo(this.company, {Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text('基本資料', style: TextStyle(color: Colors.grey)),
-        const SizedBox(height: 3.0),
-        GestureDetector(
-          onTap: () async {
-            final url = Uri.parse(company.url);
-            if (await canLaunchUrl(url)) {
-              await launchUrl(url);
-            }
-          },
-          child: Row(
-            children: [
-              Text(
-                company.name,
-                style: const TextStyle(
-                  color: Colors.blue,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 5.0),
-                child: Icon(Icons.sports_basketball),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
 class _VerticalSpace extends StatelessWidget {
   const _VerticalSpace({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(height: 20.0);
+    return const SizedBox(height: 15.0);
   }
 }
 
@@ -166,5 +118,17 @@ class _HorizontalSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(width: 55.0);
+  }
+}
+
+class _Divider extends StatelessWidget {
+  const _Divider({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: 10.0),
+      child: Divider(),
+    );
   }
 }
